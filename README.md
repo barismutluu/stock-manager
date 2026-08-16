@@ -129,9 +129,9 @@ npm run build
 
 ## 🌐 Canlı Demo
 
-> Netlify deployment tamamlandıktan sonra canlı proje bağlantısı buraya eklenecektir.
+Uygulamayı canlı olarak inceleyebilirsiniz:
 
-**Live Demo:** `Yakında`
+**[StockManager - Canlı Demo](https://baris-stock-manager.netlify.app)**
 
 ---
 

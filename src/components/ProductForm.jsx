@@ -1,19 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createProduct } from "../interfaces/product";
 
 function ProductForm({ onAddProduct, onUpdateProduct, editingProduct }) {
-    const [name, setName] = useState(
-        editingProduct ? editingProduct.name : ""
-    );
-    const [category, setCategory] = useState(
-        editingProduct ? editingProduct.category : ""
-    );
-    const [stock, setStock] = useState(
-        editingProduct ? editingProduct.stock : ""
-    );
-    const [price, setPrice] = useState(
-        editingProduct ? editingProduct.price : ""
-    );
+    const [name, setName] = useState("");
+    const [category, setCategory] = useState("");
+    const [stock, setStock] = useState("");
+    const [price, setPrice] = useState("");
+
+    useEffect(() => {
+        if (editingProduct) {
+            setName(editingProduct.name);
+            setCategory(editingProduct.category);
+            setStock(editingProduct.stock);
+            setPrice(editingProduct.price);
+        }
+    }, [editingProduct]);
 
     function handleSubmit(event) {
         event.preventDefault();
