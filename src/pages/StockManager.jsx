@@ -5,7 +5,7 @@ import ProductList from "../components/ProductList";
 function StockManager() {
     const [products, setProducts] = useState(() => {
         const savedProducts = localStorage.getItem("products");
-
+        // Daha önce kaydedilmiş ürünler varsa LocalStorage'dan alır.
         return savedProducts ? JSON.parse(savedProducts) : [];
     });
 

@@ -4,7 +4,7 @@ function ProductList({ products, onEditProduct, onDeleteProduct }) {
             <h2 className="mb-4 text-xl font-semibold">
                 Ürünler
             </h2>
-
+            // Ürün bulunmuyorsa kullanıcıya bilgi mesajı gösterilir.
             {products.length === 0 ? (
                 <p className="text-gray-500">
                     Henüz ürün bulunmuyor.
@@ -23,6 +23,7 @@ function ProductList({ products, onEditProduct, onDeleteProduct }) {
                         </thead>
 
                         <tbody>
+                        // Ürün listesindeki her ürün için tablo satırı oluşturur.
                         {products.map((product) => (
                             <tr key={product.id}>
                                 <td className="border p-2">

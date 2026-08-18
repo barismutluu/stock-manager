@@ -15,9 +15,11 @@ function ProductForm({ onAddProduct, onUpdateProduct, editingProduct }) {
             setPrice(editingProduct.price);
         }
     }, [editingProduct]);
-
+// Formun gönderilmesini yönetir.
+// Düzenleme modundaysa ürünü günceller değilse yeni ürün oluşturur.
     function handleSubmit(event) {
         event.preventDefault();
+        // Düzenlenecek ürün değiştiğinde form alanlarını seçilen ürünün bilgileriyle doldurur.
 
         if (editingProduct) {
             const product = {
